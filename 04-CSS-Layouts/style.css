@@ -31,7 +31,6 @@ nav {
 
 nav a:link {
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -127,7 +126,7 @@ li:first-child {
 
 li:last-child {
   margin-bottom: 0;
-  font-style: bold;
+  font-style: italic;
 }
 
 a:link {
@@ -153,6 +152,7 @@ a:active {
 .author {
   font-style: italic;
   font-size: 18px;
+  margin: 0;
 }
 
 .copyright {
@@ -160,8 +160,11 @@ a:active {
 }
 
 .related-author {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .related {
@@ -178,50 +181,51 @@ button {
   cursor: pointer;
   font-size: 22px;
   padding: 20px;
-
-  /* Em relação ao body que é pai do botao */
   position: absolute;
   bottom: 50px;
   right: 50px;
 }
 
-/* FLOATS */
-.author-img {
-  float: left;
-  margin-bottom: 20px;
+/* FLEX-BOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.author {
-  /* padding-left: 80px; */
-  float: left;
-  margin-top: 10px;
-  margin-left: 20px;
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
 }
 
-h1 {
-  float: left;
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-nav {
-  float: right;
-}
-
-.clearfix::after {
-  clear: both;
-  content: "";
+.related-link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
   display: block;
 }
 
-article {
-  float: left;
-  width: 825px;
+.row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: flex-start;
 }
 
 aside {
-  width: 300px;
-  float: right;
+  flex: 0 0 300px;
 }
 
-footer {
-  clear: both;
+article {
+  flex: 1;
 }
